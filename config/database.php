@@ -55,9 +55,9 @@ return [
 		'mysql' => [
 			'driver'    => 'mysql',
 			'host'      => env('DB_HOST', 'localhost'),
-			'database'  => env('DB_DATABASE', 'sharemarket'),
-			'username'  => env('DB_USERNAME', 'adminweb'),
-			'password'  => env('DB_PASSWORD', 'root123456'),
+			'database'  => env('DB_DATABASE', 'sharemarket_web360'),
+			'username'  => env('DB_USERNAME', 'root'),
+			'password'  => env('DB_PASSWORD', ''),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

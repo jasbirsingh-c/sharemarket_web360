@@ -34,7 +34,7 @@ class EodController extends Controller {
 		/* $target_dir = public_path()."\uploads\eod_data\\";
 		$target_file = $target_dir . basename($_FILES["excel_file"]["name"]); */
 		//$target_file = 'C:\xampp\htdocs\sharemarket_app\uploads\eod_data\Copy (2) of fo28AUG2015bhav.csv';
-		$target_file = 'uploads/eod_data/Copy of fo28AUG2015bhav.csv';
+		$target_file = 'uploads/eod_data/fo28AUG2015bhav - Copy (2).csv';
 		//$target_file = 'C:\xampp\htdocs\sharemarket_app\uploads\eod_data\fo28AUG2015bhav - Copy.csv';
 		
 		/* if (move_uploaded_file($_FILES["excel_file"]["tmp_name"], $target_file)) {

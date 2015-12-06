@@ -21,7 +21,7 @@ $(function () {
             series : [{
                 type : 'candlestick',
                 name : 'AAPL Stock Price',
-                data : [<?php echo join($data, ',') ?>],
+                data : ([<?php echo join($data, ',') ?>]),
                 dataGrouping : {
                     units : [
                         [

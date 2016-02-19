@@ -24,7 +24,7 @@ class CreateSubscriptionRequest extends Request
         return [
 			'subscription_name' => 'required',
 			'description' => 'required',
-			'amt' => 'required',
+			'amt' => 'required|numeric',
 		];
     }
 

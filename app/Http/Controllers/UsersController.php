@@ -21,7 +21,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = User::latest()->paginate(20);
+        $users = User::latest()->paginate(2);
 
         $no = $users->firstItem();
 		
@@ -37,7 +37,9 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('users.create');
+    	$subscription = Subscription::lists('subscription_name', 'id');
+    	//echo '<pre>';print_r($subscription);die;
+        return view('users.create', compact('subscription'));
     }
 
     /**

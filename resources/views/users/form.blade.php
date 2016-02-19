@@ -28,7 +28,11 @@
 	</div>	<div class="form-group">
 	    {!! Form::label('email', 'Email:', ['class' => 'col-md-2 control-label']) !!}
 	    <div class="col-sm-9">
-	        {!! Form::email('email', null, ['class' => 'form-control']) !!}
+	    @if (isset($model))
+	        {!! Form::email('email', null, ['class' => 'form-control', 'readonly' => 'readonly']) !!}
+	    @else    
+	    	{!! Form::email('email', null, ['class' => 'form-control']) !!}	
+    	@endif
 	    </div>
 	</div>	<!--<div class="form-group">
 	    {!! Form::label('password', 'Password:', ['class' => 'col-md-2 control-label']) !!}

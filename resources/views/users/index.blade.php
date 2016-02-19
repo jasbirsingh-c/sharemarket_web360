@@ -4,9 +4,9 @@
   <div class="panel panel-default">
 	<div class="panel-heading">
 		All Users
-		<!--<div class="panel-nav pull-right" style="margin-top: -7px;">
+		<div class="panel-nav pull-right" style="margin-top: -7px;">
 			<a href="{!! route('users.create') !!}" class="btn btn-default">Add New</a>
-		</div> -->
+		</div>
 	</div>
 	<table class="table table-stripped table-bordered">
 		<thead>
@@ -45,6 +45,7 @@
 				</tr>
 				<?php $no++; ?>
 			@endforeach
+			{!! $users->render() !!}
 		</tbody>
 	</table>
 	<div class="panel-footer">

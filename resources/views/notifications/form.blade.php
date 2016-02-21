@@ -16,9 +16,9 @@
         {!! Form::open(['files' => true, 'route' => 'notifications.store']) !!}
     @endif
     	<div class="form-group">
-	    {!! Form::label('user_id', 'User Id:', ['class' => 'col-md-2 control-label']) !!}
+	    {!! Form::label('user_id', 'User:', ['class' => 'col-md-2 control-label']) !!}
 	    <div class="col-sm-9">
-	        {!! Form::text('user_id', null, ['class' => 'form-control']) !!}
+	    {!! Form::select('user_id',$user_data) !!}
 	    </div>
 	</div>
 	<div class="form-group">

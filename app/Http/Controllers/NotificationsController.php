@@ -35,7 +35,8 @@ class NotificationsController extends Controller
      */
     public function create()
     {
-        return view('notifications.create');
+    	$user_data = User::lists('name','id');
+        return view('notifications.create',compact('user_data'));
     }
 
     /**

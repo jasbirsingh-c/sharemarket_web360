@@ -28,7 +28,7 @@
 					<td>{!! $user->contact_no !!}</td>
 					<td>{!! $user->email !!}</td>
 					<td>
-						<?php echo (isset($subscription_data[$user->subscription])) ? ucfirst($subscription_data[$user->subscription]) : 'Free'; ?>
+						<?php echo (isset($subscription_data[$user->subscription])) ? ucfirst($subscription_data[$user->subscription]) : 'Basic'; ?>
 					</td>
 					<td>{!! $user->start_date !!}</td>
 					<td>{!! $user->end_date !!}</td>					
@@ -45,7 +45,6 @@
 				</tr>
 				<?php $no++; ?>
 			@endforeach
-			{!! $users->render() !!}
 		</tbody>
 	</table>
 	<div class="panel-footer">

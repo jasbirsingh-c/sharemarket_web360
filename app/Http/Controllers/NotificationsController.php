@@ -51,7 +51,8 @@ class NotificationsController extends Controller
     	$device_id = $user_obj->device_id;
 		//echo $device_id;
     	// API access key from Google API's Console
-    	define( 'API_ACCESS_KEY', 'AIzaSyBupDgnZTM5fgZMHl-7rkdWQo1xjCMrxt0' );
+    	define( 'API_ACCESS_KEY', 'AIzaSyAglCBzKTWNam2prAZ6mjJfY0gn9os3M7s' );
+    	
     	$registrationIds = array( $device_id );
     	// prep the bundle
     	$msg = array

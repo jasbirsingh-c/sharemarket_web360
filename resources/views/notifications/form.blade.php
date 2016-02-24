@@ -16,11 +16,24 @@
         {!! Form::open(['files' => true, 'route' => 'notifications.store']) !!}
     @endif
     	<div class="form-group">
-	    {!! Form::label('user_id', 'User:', ['class' => 'col-md-2 control-label']) !!}
+	    {!! Form::label('user_id', 'Select Any one:', ['class' => 'col-md-2 control-label']) !!}
+	    <div class="col-sm-9">
+	    <input type="radio" name="user_selection" value="user_list">User List
+	    <?php
+	    	foreach ($subscription_data as $key => $subscription)
+	    	{ ?>
+	    		<input type="radio" name="user_selection" value="<?php echo $key?>"> <?php echo $subscription?>	
+	    	<?php 	    		
+	    	}
+	    ?>
+	    </div>
+	</div>
+	<div class="form-group" id="user_list_div" style="display:none;">
+	    {!! Form::label('user_id', 'Select a user:', ['class' => 'col-md-2 control-label']) !!}
 	    <div class="col-sm-9">
 	    {!! Form::select('user_id',$user_data) !!}
 	    </div>
-	</div>
+	</div>	
 	<div class="form-group">
 	    {!! Form::label('title', 'Title:', ['class' => 'col-md-2 control-label']) !!}
 	    <div class="col-sm-9">
@@ -54,3 +67,13 @@
     </div>
     {!! Form::close() !!}
 </div>
+<script type="text/javascript">
+	$(document).ready(function() {
+			$('input[name="user_selection"]').click(function() {
+					if($(this).val() == "user_list")
+						$('#user_list_div').show();
+					else
+						$('#user_list_div').hide();
+				});
+		});
+</script>

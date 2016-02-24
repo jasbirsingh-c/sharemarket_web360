@@ -11,4 +11,6 @@ class Notification extends Model
 		'image_url',
 		'type',
 	];
+    
+    public $timestamps = true;
 }
